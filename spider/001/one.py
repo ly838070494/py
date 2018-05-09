@@ -7,7 +7,7 @@ url = 'http://wufazhuce.com/one/'
 #数据库配置
 conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='111111', db='one', charset='utf8')
 cursor = conn.cursor()
-
+#初始化数据
 cursor.execute('select * from article order by id desc limit 1')
 article = cursor.fetchone()
 #print(article)
